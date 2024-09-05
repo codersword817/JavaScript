@@ -56,6 +56,12 @@ when you f(obj)==> it means give obj1  = obj same as discussed above
 but when you reassign in function then uk that it creates a new copy and starts pointing it and obj remains the same and obj1 points to newly created ones
 */
 
+/*
+call by sharing => intermediary between the 
+call by value and call by reference 
+
+*/
+
 function manipulateArray(arr) {
   arr.push(10);
   arr = [1];
