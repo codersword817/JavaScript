@@ -54,4 +54,13 @@ console.log(toppers);
 
 // Callback=> fn passed as an arg to another fn
 
-// Higher Order fn => fn that accepts another function as parameter
+// Higher Order fn => fn that accepts another function as parameter or it returns the function
+
+// get the maxArray using forEach()
+
+let maxMarks_2 = 0;
+marks.forEach((student) => {
+  maxMarks_2 = Math.max(student.maths, maxMarks_2);
+});
+
+console.log("The Maximum score obtained is ", maxMarks_2);
