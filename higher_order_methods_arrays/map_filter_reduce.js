@@ -1,7 +1,13 @@
 const arr = [1, 2, 3, 4, 5];
 
 const squared_arr = arr.map((ele) => ele * ele);
-// returns a new copy of the elements
+// returns a new copy of the elements doesnot alter the existing arr
+//  arr.map()
+//  Array.prototype.map = function(callback){
+//       const res=[];
+//       for(let i=0;i<this.length;i++){ res.push(callback(this[i], i, this));  }
+//       return res;
+//  }
 console.log(squared_arr);
 console.log(arr);
 
@@ -32,10 +38,6 @@ console.log(reducedSum);
 // getMax using
 let maxi = 0;
 let maxScore_2 = result.reduce((acc, ele) => {
-  if (acc > ele.marks) {
-    return acc;
-  } else {
-    return ele.marks;
-  }
-});
+  return Math.max(acc, ele.marks);
+}, Number.MIN_VALUE);
 console.log(maxScore_2);
